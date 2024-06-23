@@ -11,7 +11,7 @@ class PepSpider(scrapy.Spider):
         pep_links = response.css(
             '#numerical-index a.pep.reference.internal::attr(href)'
         ).getall()
-        unique_links = sorted(list(set(pep_links)))
+        unique_links = list(set(pep_links))
         for pep_link in unique_links:
             yield response.follow(pep_link, callback=self.parse_pep)
 
