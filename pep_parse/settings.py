@@ -19,6 +19,10 @@ FILE_FORMAT = 'csv'
 PEP_NAME = 'pep'
 PEP_FILE_NAME = f'{PEP_NAME}_%(time)s.{FILE_FORMAT}'
 
+PEPS_DOMAIN = 'peps.python.org'
+PEPS_URL = 'https://peps.python.org/'
+
+
 FEEDS = {
     f'{RESULTS}/{PEP_FILE_NAME}': {
         'format': FILE_FORMAT,
