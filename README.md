@@ -49,5 +49,5 @@ results/status_summary_2024-06-23_18-45-00.csv
  - Total	506
 
 
-### Автор
+## Автор
 ### Локотков Никита (https://github.com/lokotkovnv)

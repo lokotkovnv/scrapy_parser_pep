@@ -2,7 +2,9 @@ import csv
 import datetime as dt
 import os
 from collections import defaultdict
+
 from pep_parse.settings import BASE_DIR, RESULTS
+
 
 class PepParsePipeline:
 
@@ -17,7 +19,9 @@ class PepParsePipeline:
         output_path = os.path.join(self.results_dir, filename)
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-        self.output_file = open(output_path, mode='w', encoding='utf-8', newline='')
+        self.output_file = open(
+            output_path, mode='w', encoding='utf-8', newline=''
+        )
         self.csv_writer = csv.DictWriter(
             self.output_file, fieldnames=['Статус', 'Количество']
         )
